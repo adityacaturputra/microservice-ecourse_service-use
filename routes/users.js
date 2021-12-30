@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const usersHander = require('./handler/users');
+const usersHandler = require('./handler/users');
 
-router.post('/register', usersHander.register)
-router.post('/login', usersHander.login)
+router.post('/register', usersHandler.register)
+router.post('/login', usersHandler.login)
+router.put('/:id', usersHandler.update)
 
 module.exports = router;
